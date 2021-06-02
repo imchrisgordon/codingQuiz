@@ -1,0 +1,74 @@
+h2 {
+  color: white;
+  text-align: center;
+  border: 1px solid black;
+  width: fit-content;
+  background-color: black;
+  padding: 5px;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px gray;
+  font-family: "Bebas Neue", cursive;
+  font-size: 50px;
+}
+
+body {
+  color: white;
+  background-image: url(./bgimg2.jpeg);
+  background-size: cover;
+}
+
+.panel {
+  font-family: "Bebas Neue", cursive;
+  font-size: 25px;
+  color: white;
+  text-align: center;
+  width: fit-content;
+  background-color: black;
+  padding: 5px;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px lightblue;
+  background-image: url(./bgimg2.jpeg);
+}
+
+#time { 
+  position: absolute; 
+  top: 1em;
+  right: 1em; 
+  padding: .3em .8em;
+  background: LightBlue;
+  font-weight: bold; 
+  font-size: 1.1em;
+  text-align: center;
+  border-radius: 40px;
+  display: inline-block;
+}
+#time,
+#noMoreTime,
+div[id^='panel']{
+  display: none;
+}
+
+#time.showing,
+#noMoreTime.showing,
+div[id^='panel'].show{
+  display: block;
+}
+
+table { width: 220px; margin: 0 auto; }
+table td { padding: 0.3em 0.7em }
+
+/* div[id^="panel"] {
+  display: none;
+}
+
+div[id^="panel"].show {
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  html {
+    background-image: url(./bgimg2.jpeg);
+  }
+} */

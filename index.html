@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Quiz</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div>
+      <header>
+        <div id="time"></div>
+        <h2>Coding Quiz</h2>
+      </header>
+      <div>
+        <div id="panel-1" class="show panel">
+          <p>
+            This is a timed coding quiz to help sharpen your skills.<br />Every
+            incorrect answer will remove time, so beware.<br />Click below to
+            start.
+          </p>
+          <button id="start" type="button" onclick="startTest();">Start</button>
+        </div>
+        <div id="panel-2" class="panel">
+          <p>When was JavaScript created?</p>
+          <button type="button" onclick="continueTest('panel-3',true);">
+            September 1995
+          </button>
+          <button type="button" onclick="continueTest('panel-3',false);">
+            August 1995
+          </button>
+          <button type="button" onclick="continueTest('panel-3',false);">
+            June 1996
+          </button>
+          <button type="button" onclick="continueTest('panel-3',false);">
+            None of the above
+          </button>
+        </div>
+        <div id="panel-3" class="panel">
+          <p>
+            Which built-in method returns the character at the specified index?
+          </p>
+          <button type="button" onclick="continueTest('panel-4',false);">
+            characterAt()
+          </button>
+          <button type="button" onclick="continueTest('panel-4',false);">
+            getCharAt()
+          </button>
+          <button type="button" onclick="continueTest('panel-4',true);">
+            charAt()
+          </button>
+          <button type="button" onclick="continueTest('panel-4',false);">
+            getcharat()
+          </button>
+        </div>
+        <div id="panel-4" class="panel">
+          <p>Which built-in method sorts the elements of an array?</p>
+          <button type="button" onclick="continueTest('panel-5',false);">
+            changeOrder(order)
+          </button>
+          <button type="button" onclick="continueTest('panel-5',true);">
+            sort()
+          </button>
+          <button type="button" onclick="continueTest('panel-5',false);">
+            order()
+          </button>
+          <button type="button" onclick="continueTest('panel-5',false);">
+            sortOrder()
+          </button>
+        </div>
+        <div id="panel-5" class="panel">
+          <p>Who created JavaScript?</p>
+          <button type="button" onclick="continueTest('panel-6',false);">
+            Jim Harrison
+          </button>
+          <button type="button" onclick="continueTest('panel-6',false);">
+            Mark Samuels
+          </button>
+          <button type="button" onclick="continueTest('panel-6',false);">
+            Carl Arkell
+          </button>
+          <button type="button" onclick="continueTest('panel-6',true);">
+            Brenden Eich
+          </button>
+        </div>
+        <div id="panel-6" class="panel">
+          <p>What was the original name for JavaScript?</p>
+          <button type="button" onclick="continueTest('panel-7',false);">
+            Latte
+          </button>
+          <button type="button" onclick="continueTest('panel-7',false);">
+            Espresso
+          </button>
+          <button type="button" onclick="continueTest('panel-7',true);">
+            Mocha
+          </button>
+          <button type="button" onclick="continueTest('panel-7',false);">
+            Folgers
+          </button>
+        </div>
+        <div id="panel-7" class="panel">
+          <label for="initials">
+            Enter Initials<input type="text" id="initials" />
+          </label>
+          <button type="button" onclick="enterScore();">Enter</button>
+        </div>
+        <div id="panel-9" class="panel">
+          <div id="noMoreTime">
+            <h3>No more time!</h3>
+          </div>
+          <table>
+            <thead>
+              <th></th>
+              <th style="width: 100%; text-align: left">Initals</th>
+              <th>Score</th>
+            </thead>
+            <tbody id="topScore"></tbody>
+          </table>
+          <button id="again" type="button" onclick="startTest();">
+            Try Again
+          </button>
+          <button id="clear" type="button" onclick="clearScores();">
+            Clear Scores
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Link to JS -->
+    <script src="./assets/script.js"></script>
+  </body>
+</html>
